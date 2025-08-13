@@ -100,13 +100,12 @@ raw = """37107287533902102798797998220837590246510135740250<br>
 53503534226472524250874054075591789781264330331690<br>"""
 
 numbers = raw.strip().split("<br>")
+num = 0
+sum = 0
 
-sum = ""
-temp = 0
-over = 0
-new_sum = ""
+for i in range(len(numbers)-1):
+    num = int(numbers[i])
+    print(num)
+    sum += num
 
-for num in numbers:
-    for i in len(max(sum.strip(),num.strip())):
-        new_sum[-i] = str(int(num[-i]) + int(sum[-i]))
-        
+print("Somma",sum)
